@@ -315,6 +315,48 @@ h1 {
   font-size: 12px;
 }
 
+.author-card {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  width: min(560px, 100%);
+}
+
+.author-photo {
+  width: 98px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  flex-shrink: 0;
+}
+
+.author-info h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.author-info p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.author-info a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.author-info a:hover {
+  text-decoration: underline;
+}
+
 @keyframes ticker {
   from {
     transform: translateX(0);
@@ -636,6 +678,10 @@ h1 {
   }
 
   .search-input {
+    width: 100%;
+  }
+
+  .author-card {
     width: 100%;
   }
 }

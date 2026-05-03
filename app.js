@@ -15,6 +15,9 @@
       viewResources: "查看资源",
       updatedAt: "最近更新",
       coverage: "覆盖市场",
+      contactTitle: "个人联系信息",
+      emailLabel: "邮箱",
+      phoneLabel: "电话",
       pathsTitle: "学习路径",
       pathsDesc: "从基础认知到实战进阶，按阶段系统学习。",
       topicsTitle: "核心专题",
@@ -52,6 +55,9 @@
       viewResources: "View Resources",
       updatedAt: "Updated",
       coverage: "Market Coverage",
+      contactTitle: "Contact",
+      emailLabel: "Email",
+      phoneLabel: "Phone",
       pathsTitle: "Learning Paths",
       pathsDesc: "Move from fundamentals to advanced execution in structured stages.",
       topicsTitle: "Core Topics",
@@ -212,6 +218,23 @@
     const markets = (state.lang === "en" ? (data.site.marketCoverageEn || []) : data.site.marketCoverage) || [];
     const pills = markets.map((item) => `<span class="hero-market-pill">${safeText(item)}</span>`).join("");
     heroTickerTrack.innerHTML = pills + pills;
+
+    if (data.site.contact) {
+      const emailEl = byId("author-email");
+      const phoneEl = byId("author-phone");
+      const photoEl = byId("author-photo");
+      if (emailEl) {
+        emailEl.textContent = data.site.contact.email || "";
+        emailEl.href = `mailto:${data.site.contact.email || ""}`;
+      }
+      if (phoneEl) {
+        phoneEl.textContent = data.site.contact.phone || "";
+        phoneEl.href = `tel:${String(data.site.contact.phone || "").replace(/\s+/g, "")}`;
+      }
+      if (photoEl && data.site.contact.photo) {
+        photoEl.src = data.site.contact.photo;
+      }
+    }
   }
 
   function renderPaths() {

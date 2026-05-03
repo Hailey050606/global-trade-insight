@@ -18,7 +18,12 @@ window.SITE_CONTENT = {
       { value: "24h", label: "Content Update Cycle" }
     ],
     marketCoverage: ["北美", "欧洲", "亚太", "中东", "拉美", "跨区域供应链"],
-    marketCoverageEn: ["North America", "Europe", "APAC", "Middle East", "LATAM", "Cross-region Supply Chains"]
+    marketCoverageEn: ["North America", "Europe", "APAC", "Middle East", "LATAM", "Cross-region Supply Chains"],
+    contact: {
+      email: "zjy15269352912@gmail.com",
+      phone: "+60 1112449711",
+      photo: "./assets/profile-photo.png"
+    }
   },
   paths: [
     {
