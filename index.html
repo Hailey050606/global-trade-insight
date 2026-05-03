@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Trade Insight</title>
+  <meta name="description" content="国际贸易知识分享单页网站">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="bg-glow bg-glow-a" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="header">
+    <a class="brand" href="#top">Global Trade Insight</a>
+    <nav class="nav">
+      <a href="#paths" data-i18n="navPaths">学习路径</a>
+      <a href="#topics" data-i18n="navTopics">核心专题</a>
+      <a href="#cases" data-i18n="navCases">案例解析</a>
+      <a href="#resources" data-i18n="navResources">资源中心</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="controls">
+      <input id="search-input" class="search-input" type="search" placeholder="搜索专题 / 标签">
+      <button id="lang-toggle" class="chip control-btn" type="button">EN</button>
+      <button id="theme-toggle" class="chip control-btn" type="button">Light</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section reveal">
+      <p class="eyebrow">INTERNATIONAL TRADE KNOWLEDGE HUB</p>
+      <h1 id="site-title">Global Trade Insight</h1>
+      <p class="hero-subtitle" id="site-subtitle"></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#topics" data-i18n="startLearning">开始学习</a>
+        <a class="btn btn-ghost" href="#resources" data-i18n="viewResources">查看资源</a>
+      </div>
+      <p class="updated-at"><span data-i18n="updatedAt">最近更新</span>：<span id="site-updated-at">-</span></p>
+      <div class="hero-metrics" id="hero-metrics"></div>
+      <div class="hero-ticker-wrap">
+        <p class="hero-ticker-title" data-i18n="coverage">覆盖市场</p>
+        <div class="hero-ticker">
+          <div class="hero-ticker-track" id="hero-ticker-track"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="paths">
+      <div class="section-head">
+        <h2 data-i18n="pathsTitle">学习路径</h2>
+        <p data-i18n="pathsDesc">从基础认知到实战进阶，按阶段系统学习。</p>
+      </div>
+      <div class="card-grid" id="paths-grid"></div>
+    </section>
+
+    <section class="section reveal" id="topics">
+      <div class="section-head">
+        <h2 data-i18n="topicsTitle">核心专题</h2>
+        <p data-i18n="topicsDesc">术语、合规、物流、结算等实务要点。</p>
+      </div>
+      <div class="topic-toolbar">
+        <div class="chips" id="level-filter"></div>
+        <div class="chips" id="region-filter"></div>
+        <button id="favorite-filter-toggle" class="chip favorite-filter-btn" type="button" data-i18n="favoritesOnly">只看收藏</button>
+      </div>
+      <p class="topic-count" id="topic-count"></p>
+      <div class="card-grid" id="topics-grid"></div>
+    </section>
+
+    <section class="section reveal" id="cases">
+      <div class="section-head">
+        <h2 data-i18n="casesTitle">案例解析</h2>
+        <p data-i18n="casesDesc">从问题、处理到复盘，积累可复用经验。</p>
+      </div>
+      <div class="timeline" id="cases-timeline"></div>
+    </section>
+
+    <section class="section reveal" id="resources">
+      <div class="section-head">
+        <h2 data-i18n="resourcesTitle">资源中心</h2>
+        <p data-i18n="resourcesDesc">模板、清单与官方参考链接。</p>
+      </div>
+      <div class="card-grid" id="resources-grid"></div>
+    </section>
+
+    <section class="section reveal" id="faq">
+      <div class="section-head">
+        <h2 data-i18n="faqTitle">常见问题</h2>
+      </div>
+      <div class="faq-list" id="faq-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Global Trade Insight</p>
+  </footer>
+
+  <dialog id="topic-modal" class="topic-modal">
+    <article class="topic-modal-card">
+      <div class="topic-modal-head">
+        <h3 id="modal-title"></h3>
+        <button id="modal-close" class="chip control-btn" type="button">Close</button>
+      </div>
+      <p class="topic-modal-meta" id="modal-meta"></p>
+      <p id="modal-summary"></p>
+      <p id="modal-detail"></p>
+    </article>
+  </dialog>
+
+  <script src="./content.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
